@@ -16,6 +16,12 @@ url = ""
 
 #initilizes the program by getting all the needed data
 def init():
+  global Last_price
+  global htmltext
+  global html
+  global Subject
+  global url
+  global dones
   print("Make sure that you have let less secure apps use your email turned on!")
   gmail_user = input("Type in you email adress: ")
   gmail_password = input("Type in your email password: ")
@@ -34,7 +40,6 @@ def Checkprice():
     global url
     global dones
     for html in html.find_all('li'):
-        print(html)
         if (html.get('class') == ['price-current']):
             if(float(html.find_all('strong')[0].string + html.find_all('sup')[0].string) != Last_price):
                 try:
@@ -62,8 +67,3 @@ while True:
     html = BeautifulSoup(htmltext, 'html.parser')
     Checkprice()
     time.sleep(60) 
-      
-
-            
-    
-
