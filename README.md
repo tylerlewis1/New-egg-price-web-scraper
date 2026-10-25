@@ -17,4 +17,4 @@ When you start the program you will need to type in your email and email passwor
 </html>
 
 
-### Credit: Nico and Tyler
+
